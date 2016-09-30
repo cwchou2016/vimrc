@@ -87,10 +87,18 @@ source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 
 " 解决consle输出乱码
-language messages zh_CN.utf-8
+" language messages zh_CN.utf-8
 
 " 状态栏配置
 set laststatus=2
+
+set t_Co=256
+color wombat256mod
+" colorscheme Tomorrow-Night-Bright
+" color Tomorrow-Night-Bright
+" 使用自带配色
+" colorscheme evening
+" set background=dark
 
 " 打开语法高亮
 syntax enable
@@ -120,11 +128,6 @@ set ignorecase
 set smartcase
 
 set guifont=Menlo:h14
-
-colorscheme Tomorrow-Night-Bright
-" 使用自带配色
-"colorscheme elflord
-"set background=dark
 
 " 在状态栏显示正在输入的命令
 set showcmd
