@@ -144,6 +144,13 @@ set mouse=a
 " 设置行号
 set nu
 
+" set length of line
+set tw=72 " width of document
+set fo=cqt
+set wm=0
+set colorcolumn=80
+highlight ColorColumn ctermbg=233
+
 " 退格键可用
 set backspace=2
 
@@ -190,13 +197,19 @@ autocmd BufReadPost *
 
 """""""""""""""""""""""""KEY MAPPING""""""""""""""""""""
 
+" rebind leader key
+let mapleader=","
+
 " 映射切换buffer的键位
 nnoremap [b :bp<CR>
 nnoremap ]b :bn<CR>
 
 " 映射切换tab的键位
-nnoremap [t :tabp<CR>
-nnoremap ]t :tabn<CR>
+" nnoremap [t :tabp<CR>
+" nnoremap ]t :tabn<CR>
+map <Leader>n <esc>:tabp<CR>
+map <Leader>m <esc>:tabn<CR>
+
 
 " normal模式下Ctrl+c全选并复制到系统剪贴板(linux必须装有vim-gnome)
 nmap <C-c> gg"+yG
@@ -218,12 +231,33 @@ nmap <silent> <F3> :NERDTreeToggle<CR>
 
 " F4显示TagList
 nmap <silent> <F4> :TagbarToggle<CR>
+imap <silent> <F4> <esc>:TagbarToggle<CR>
 
+" 測量程式執行的時間
+function! RunningTime(cmd)
+
+    let startTime=system("date +%s%3N")
+
+    let stm=localtime()
+
+    execute a:cmd
+    let endTime=system("date +%s%3N")
+    let result= (endTime - startTime)/1000.0
+
+    let r= localtime()- stm
+
+    echo "\n"
+    echo "Finished. running time: ".string(result)." sec"
+    echo r
+endfunction
 " F5运行脚本
 if exists("$VIRTUAL_ENV")
     autocmd FileType python map <buffer> <F5> :!$VIRTUAL_ENV'/bin/python' %<CR>
 else
-    autocmd FileType python map <buffer> <F5> :!python %<CR>
+    " autocmd FileType python nmap <buffer> <F5> :!python %<CR>
+    " autocmd FileType python imap <buffer> <F5> <esc>:!python %<CR>
+    autocmd FileType python nmap <buffer> <F5> <esc>:call RunningTime("!python %")<CR>
+    autocmd FileType python imap <buffer> <F5> <esc>:call RunningTime("!python %")<CR>
 endif
 
 " <F6> 新建标签页
@@ -264,6 +298,8 @@ imap <C-e> <C-X><C-U>
 
 """"""""""""""""""""""""""""""PLUGIN CONFIG""""""""""""""""""""""""""
 " NerdCommenter
+" <leader>cc to comment, <leader>cu to uncomment
+" <leader>ci to toggle comment
 let g:NERDSpaceDelims=1
 
 " NERDTREE
