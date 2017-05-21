@@ -1,19 +1,16 @@
 My VIM Settings
 ===============
-This project is extracted from [my dot files](https://github.com/axiaoxin/mac-dotfiles)
+Update from [my dot files](https://github.com/axiaoxin/vim-settings)
 
-This VIM settings is for Python programmers on Mac OSX, may be you will write some html, css, js, Markdown, NodeJS and Clojure. It use Vundle to manage the plugins.
+Vim setting for python on Raspberry pi.
 
 ###VIM Version
 
-VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Apr 13 2015 00:22:48)
-
-MacOS X (unix) version
+vim 7.4
 
 ###Dependences
 
-    brew install vim git npm ctags
-    sudo npm -g install instant-markdown-d jshint
+    sudo apt-get install vim git ctags
     sudo pip install isort jedi yapf flake8 virtualenvwrapper autopep8
 
 [Maybe I have forgot some other dependences :( ]
@@ -32,7 +29,6 @@ MacOS X (unix) version
 - [vim-snippets](https://github.com/honza/vim-snippets) vim-snipmate default snippets
 - [UltiSnips](https://github.com/SirVer/ultisnips) The ultimate snippet solution for Vim
 - [vim-surround](https://github.com/tpope/vim-surround) quoting/parenthesizing made simple
-- [vim-instant-markdown](https://github.com/suan/vim-instant-markdown) Instant Markdown previews from VIM!
 - [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) True Sublime Text style multiple selections for Vim
 - [vim-startify](https://github.com/mhinz/vim-startify) A fancy start screen for Vim
 - [vim-emoji](https://github.com/junegunn/vim-emoji) Named Emoji in Vim
@@ -65,7 +61,6 @@ MacOS X (unix) version
 - paste toggle: `<F7>`
 - PEP8 format by autopep8: `<F8>`
 - PEP8 format by yapf: `<F9>`
-- Pretty json: `<F9>`
 - wrap `"`/`'` for a word: `w"`/`w'`
 - continue indent text to left or right on select/normal mode: `>` `<`
 - change window: `<C-HJKL>`
