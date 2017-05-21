@@ -52,8 +52,9 @@ MacOS X (unix) version
 
 ###Short Keys
 
+- leader key = ","
 - change buf: `]b` `[b`
-- change tab: `]t` `[t`
+- change tab: <leader>n, <leader>m
 - copy (all/selected) content: `Ctrl+c`
 - write RO file: `w!!`
 - line number toggle: `<F2>`
@@ -64,6 +65,7 @@ MacOS X (unix) version
 - paste toggle: `<F7>`
 - PEP8 format by autopep8: `<F8>`
 - PEP8 format by yapf: `<F9>`
+- Pretty json: '<F9>'
 - wrap `"`/`'` for a word: `w"`/`w'`
 - continue indent text to left or right on select/normal mode: `>` `<`
 - change window: `<C-HJKL>`
