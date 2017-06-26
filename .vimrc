@@ -40,7 +40,6 @@ Plugin 'axiaoxin/favorite-vim-colorscheme'
 Plugin 'junegunn/vim-emoji'
 Plugin 'mhinz/vim-startify'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'suan/vim-instant-markdown'
 Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -320,8 +319,6 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 "Ctrl-X Ctrl-U emoji补全
 set completefunc=emoji#complete
 
-" instant-markdown
-let g:instant_markdown_slow = 1
 
 " airline
 let g:airline_section_y = '%{strftime("%H:%M")}'
