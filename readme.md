@@ -10,8 +10,8 @@ vim 7.4
 
 ###Dependences
 
-    sudo apt-get install vim git ctags
-    sudo pip install isort jedi yapf flake8 virtualenvwrapper autopep8
+    sudo apt-get install vim git ctags vim-python-jedi
+    sudo pip install isort jedi yapf flake8 virtualenvwrapper autopep8 json
 
 [Maybe I have forgot some other dependences :( ]
 
