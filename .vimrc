@@ -278,6 +278,9 @@ autocmd FileType json map <buffer><F9> :%!python -m json.tool<CR>
 nnoremap w" viw<esc>a"<esc>hbi"<esc>lel
 nnoremap w' viw<esc>a'<esc>hbi'<esc>lel
 
+" 刪除單字引號
+noremap d" viw<esc>l<del>bh<del>e
+
 " 在Normal Mode和Visual/Select Mode下，利用Tab键和Shift-Tab键来缩进文本
 nnoremap > >>
 nnoremap < <<
